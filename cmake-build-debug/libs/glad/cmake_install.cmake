@@ -1,4 +1,4 @@
-# Install script for directory: /home/lazar/Desktop/grafika /petsims2 (another copy)(1)/petsims2 (another copy)/libs/glad
+# Install script for directory: /home/lazar/Desktop/test/RG-projekat/libs/glad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -31,6 +31,9 @@ unsigned int loadCubemap(vector<std::string> faces);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+bool blur = false;
+bool blurKeyPressed = false;
+
 // camera
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 
@@ -521,6 +524,7 @@ int main() {
 
 
         framebuffersShader.use();
+        framebuffersShader.setInt("blur", blur);
         glBindVertexArray(quadVAO);
         glBindTexture(GL_TEXTURE_2D,textureColorbuffer);
         glDrawArrays(GL_TRIANGLES,0,6);
@@ -574,6 +578,19 @@ void processInput(GLFWwindow *window) {
         camera.ProcessMouseMovement(30.0, 0.0);
     if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
         camera.ProcessMouseMovement(-30.0, 0.0);
+
+
+    if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && !blurKeyPressed){
+        blur = !blur;
+        blurKeyPressed = true;
+    }
+
+    if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_RELEASE){
+
+        blurKeyPressed = false;
+    }
+
+
 }
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
