@@ -9,3 +9,18 @@ Prazan projekat sa pratećim bibliotekama koje koristimo na času.
 5. Zaglavlja (h i hpp) fajlovi idu u include
 6. Šejderi idu u folder shaders. `Vertex shader` ima ekstenziju `.vs`, `fragment shader` ima ekstenziju `.fs`
 7. ALT+SHIFT+F10 -> project_base -> run
+
+# Kontrole
+
+1. Za kretanje kamere:
+    W - Forward 
+    A - Left 
+    S - Back
+    D - Right
+2. Space - paljenje/gasenje blur efekta
+3. Esc - Exit 
+
+#Dodatne oblasti koje su implemetnirane
+
+1. Skybox
+2. Framebuffer
