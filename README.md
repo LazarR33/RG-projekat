@@ -20,7 +20,7 @@ Prazan projekat sa pratećim bibliotekama koje koristimo na času.
 2. Space - paljenje/gasenje blur efekta
 3. Esc - Exit 
 
-#Dodatne oblasti koje su implemetnirane
+# Dodatne oblasti koje su implemetnirane
 
 1. Skybox
 2. Framebuffer
